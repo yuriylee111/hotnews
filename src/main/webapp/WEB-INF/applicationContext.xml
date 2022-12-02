@@ -17,14 +17,6 @@
 
     <mvc:annotation-driven/>
 
-    <!--    <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"-->
-    <!--          destroy-method="close">-->
-    <!--        <property name="driverClass" value="com.mysql.cj.jdbc.Driver"/>-->
-    <!--        <property name="jdbcUrl" value="jdbc:mysql://localhost:3306/news_db?useSSL=false&amp;serverTimezone=UTC"/>-->
-    <!--        <property name="user" value="root"/>-->
-    <!--        <property name="password" value="root"/>-->
-    <!--    </bean>-->
-
     <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"
           destroy-method="close">
         <property name="driverClass" value="org.postgresql.Driver"/>
@@ -45,7 +37,6 @@
         <property name="packagesToScan" value="com.lee.hotnews.entity"/>
         <property name="hibernateProperties">
             <props>
-                <!--                <prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>-->
                 <prop key="hibernate.dialect">org.hibernate.dialect.PostgreSQL82Dialect</prop>
                 <prop key="hibernate.show_sql">true</prop>
             </props>
